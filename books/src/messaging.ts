@@ -9,10 +9,11 @@ const send = {
 
 export async  function setupMessaging () {
     const channelName = 'books';
+    const rabbitmqUri = (global as any).RABBITMQ_URI as string ?? "amqp://rabbitmq"
     const conn = await new Promise<amqp.Connection>(async (resolve, reject) => {
         for (let i = 0; i < 10; i++) {
             try {
-                let result = await amqp.connect("amqp://rabbitmq");
+                let result = await amqp.connect(rabbitmqUri);
                 return resolve(result);
             } catch (e) {
                 await timers.setTimeout(1000);

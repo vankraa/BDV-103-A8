@@ -8,7 +8,7 @@ export async function setup (): Promise<void> {
   }
   const uri = instance.getUri();
   (global as any).__MONGOINSTANCE = instance;
-  (global as any).MONGO_URI = uri.slice(0, uri.lastIndexOf('/'))
+  (global as any).MONGO_BOOKS_URI = uri.slice(0, uri.lastIndexOf('/'))
 }
 
 export async function teardown (): Promise<void> {

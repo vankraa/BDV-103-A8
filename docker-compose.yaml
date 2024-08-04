@@ -21,6 +21,8 @@ services:
       - mongo-books
       - rabbitmq
     image: node:20
+    env-env_file:
+      - .env
     volumes:
       - ./books:/app
       - ./node_modules:/app/node_modules
@@ -34,6 +36,8 @@ services:
       - mongo-order
       - rabbitmq
     image: node:20
+    env-env_file:
+      - .env
     volumes:
       - ./orders:/app
       - ./node_modules:/app/node_modules
@@ -47,6 +51,8 @@ services:
       - mongo-warehouse
       - rabbitmq
     image: node:20
+    env-env_file:
+      - .env
     volumes:
       - ./warehouse:/app
       - ./node_modules:/app/node_modules
@@ -57,6 +63,8 @@ services:
 
   docs:
     image: node:20
+    env-env_file:
+      - .env
     volumes:
       - ./docs:/app
       - ./node_modules:/app/node_modules
