@@ -7,4 +7,4 @@ RUN npm install
 
 COPY . .
 
-CMD ["npx", "tsx", "./index.ts"]
+CMD ["npx", "-y", "tsx", "./index.ts"]
