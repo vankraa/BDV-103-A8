@@ -1,0 +1,30 @@
+{
+    "name": "bvd-103",
+    "workspaces": [
+        "books",
+        "warehouse",
+        "orders",
+        "docs"
+    ],
+    "scripts": {
+      "lint": "npm run lint --workspace=books && npm run lint --workspace=warehouse && npm run lint --workspace=orders",
+      "check-types": "npm run check-types --workspace=books && npm run check-types --workspace=warehouse && npm run check-types --workspace=orders"
+    },
+    "devDependencies": {
+      "@openapitools/openapi-generator-cli": "^2.13.1",
+      "@types/koa": "~2.15.0",
+      "@types/koa__cors": "~5.0.0",
+      "@types/koa__router": "^12.0.4",
+      "@types/amqplib": "0.10.4",
+      "@types/koa-qs": "~2.0.3",
+      "@typescript-eslint/eslint-plugin": "^6.21.0",
+      "eslint": "^8.57.0",
+      "eslint-config-love": "^62.0.0",
+      "eslint-plugin-import": "^2.29.1",
+      "eslint-plugin-n": "^16.6.2",
+      "eslint-plugin-promise": "^6.1.1",
+      "mongodb-memory-server": "^9.1.8",
+      "typescript": "^5.4.3",
+      "vitest": "^1.4.0"
+    }
+}
