@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY . .
 
-CMD ["npx", "tsx", "./index.ts"]
+CMD ["mcmasterful-books"]
